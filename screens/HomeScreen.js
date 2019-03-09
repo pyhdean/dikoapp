@@ -50,7 +50,6 @@ export default class HomeScreen extends React.Component {
   componentDidMount() {
     let me = this;
     getNews().then((res)=>{
-      console.log(NewsItem.createNewsItems(JSON.parse(res['_bodyText']).values));
       me.setState({
         news:  NewsItem.createNewsItems(JSON.parse(res['_bodyText']).values)
       });
